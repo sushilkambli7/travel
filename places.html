@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pirates Droid - Discover Famous, Natural, Religious & Ancient Places</title>
-    <meta name="description"
-        content="Information About Famous, Natural, Religious, Ancient Places Near You, Along With The Location and Photos In This App.">
+    <title>Pirates Droid - Places</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
@@ -28,9 +26,9 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
-                        class="text-sm font-medium transition-colors hover:text-blue-600 text-blue-600 border-b-2 border-blue-600 pb-1">Home</a>
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Home</a>
                     <a href="places.html"
-                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Places</a>
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-blue-600 border-b-2 border-blue-600 pb-1">Places</a>
                     <a href="forts.html"
                         class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Forts</a>
                     <a href="pincode.html"
@@ -64,9 +62,9 @@
                     <div id="mobile-menu" class="hidden absolute top-16 right-0 w-full bg-white shadow-lg py-4 px-4">
                         <div class="flex flex-col space-y-4 mt-8">
                             <a href="index.html"
-                                class="text-lg font-medium transition-colors hover:text-blue-600 text-blue-600">Home</a>
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Home</a>
                             <a href="places.html"
-                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Places</a>
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-blue-600">Places</a>
                             <a href="forts.html"
                                 class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Forts</a>
                             <a href="pincode.html"
@@ -96,109 +94,32 @@
     </header>
 
     <main class="flex-1">
-        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style="background-image: url('header_banner.jpg'); animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both;">
-                <div class="absolute inset-0 bg-black/40"></div>
+                style="background-image: url('https://images.unsplash.com/photo-1590050752117-23a9d7fc244d');">
+                <div class="absolute inset-0 bg-black/50"></div>
             </div>
 
             <!-- Content -->
             <div class="relative z-10 container mx-auto px-4 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both;">
-                    Discover Incredible
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    Explore Incredible
                     <span class="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                        India
+                        Destinations
                     </span>
                 </h1>
 
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.2s;">
-                    Explore magnificent forts, pristine natural wonders, and rich cultural heritage.
-                    Your journey through India's most breathtaking destinations starts here.
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200">
+                    Browse through our comprehensive collection of India's top travel destinations,
+                    from serene beaches to majestic mountains.
                 </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.4s;">
-                    <a href="places.html">
-                        <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white h-11 px-8">
-                            <i data-lucide="search" class="mr-2 h-5 w-5"></i>
-                            Explore Places
-                        </button>
-                    </a>
-                    <a href="forts.html">
-                        <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 border-white text-white hover:bg-white hover:text-gray-900">
-                            <i data-lucide="map-pin" class="mr-2 h-5 w-5"></i>
-                            Discover Forts
-                        </button>
-                    </a>
-                </div>
-
-                <!-- Stats -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-600"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.6s;">
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="map-pin" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">40+</span>
-                        </div>
-                        <p class="text-gray-300">Top Destinations</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="camera" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">25+</span>
-                        </div>
-                        <p class="text-gray-300">Historic Forts</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="users" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">50K+</span>
-                        </div>
-                        <p class="text-gray-300">Happy Travelers</p>
-                    </div>
-                </div>
             </div>
-
-
         </section>
 
-        <!-- Featured Section -->
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Featured Destinations
-                    </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Discover India's most iconic and breathtaking destinations,
-                        carefully curated for unforgettable travel experiences.
-                    </p>
-                </div>
-
-                <div id="featured-places-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- PlaceCard components will be rendered here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Search & Filter Section -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Explore All Destinations
-                    </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Browse through our comprehensive collection of India's top travel destinations
-                    </p>
-                </div>
 
                 <!-- Search Bar -->
                 <div class="max-w-md mx-auto mb-8">

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="dynamic-title">Fort Details - Pirates Droid</title>
+    <meta name="description"
+        content="Discover historic forts with Pirates Droid. Explore the rich heritage and architectural brilliance of India's forts."
+        id="meta-description" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" id="og-url" />
+    <meta property="og:title" content="Fort Details - Pirates Droid" id="og-title" />
+    <meta property="og:description" content="Discover historic forts with Pirates Droid." id="og-description" />
+    <meta property="og:image" content="header_banner.jpg" id="og-image" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" id="twitter-url" />
+    <meta property="twitter:title" content="Fort Details - Pirates Droid" id="twitter-title" />
+    <meta property="twitter:description" content="Discover historic forts with Pirates Droid."
+        id="twitter-description" />
+    <meta property="twitter:image" content="header_banner.jpg" id="twitter-image" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-banner {
+            background-image: url('header_banner.jpg');
+            background-size: cover;
+            background-position: center;
+            animation-name: slideInFromBottom, fadeIn;
+            animation-duration: 0.5s, 0.5s;
+            animation-fill-mode: both, both;
+        }
+
+        .quick-info-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-info-section li strong {
+            font-weight: 600;
+        }
+
+        .weather-section {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-top: 1.25rem;
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col" style="min-height: 100vh;">
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60"
+        style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i data-lucide="mountain" class="h-8 w-8 text-blue-600"></i>
+                    <span
+                        class="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                        Pirates Droid
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600 pb-1">Home</a>
+                    <a href="places.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600 pb-1">Places</a>
+                    <a href="forts.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-blue-600 border-b-2 border-blue-600 pb-1">Forts</a>
+                    <a href="pincode.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Pincode</a>
+                    <a href="blogs.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Blog</a>
+                    <a href="app.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">App</a>
+                    <a href="about.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">About</a>
+                    <a href="contact.html"
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html">
+                        <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 flex items-center gap-2">
+                            <i data-lucide="phone" class="h-4 w-4"></i>
+                            Plan Trip
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden absolute top-16 right-0 w-full bg-white shadow-lg py-4 px-4">
+                        <div class="flex flex-col space-y-4 mt-8">
+                            <a href="index.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Home</a>
+                            <a href="places.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Places</a>
+                            <a href="forts.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-blue-600">Forts</a>
+                            <a href="pincode.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Pincode</a>
+                            <a href="blogs.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Blog</a>
+                            <a href="app.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">App</a>
+                            <a href="about.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">About</a>
+                            <a href="contact.html"
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Contact</a>
+                            <div class="pt-4 border-t">
+                                <a href="contact.html">
+                                    <button
+                                        class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 flex items-center gap-2">
+                                        <i data-lucide="phone" class="h-4 w-4"></i>
+                                        Plan Your Trip
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+            <div id="hero-image" class="hero-banner absolute inset-0 bg-cover bg-center bg-no-repeat">
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center text-white">
+                <h1 id="place-title"
+                    class="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    Loading...
+                </h1>
+
+                <p id="place-address"
+                    class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                    Please wait...
+                </p>
+
+                <div
+                    class="flex flex-col sm:flex-row gap-3 justify-center mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400">
+                    <button id="hero-view-on-map"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white h-9 px-6">
+                        <i data-lucide="map-pin" class="mr-2 h-4 w-4"></i>
+                        View on Map
+                    </button>
+                    <button id="hero-photo-gallery"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-6 border-white text-white hover:bg-white hover:text-gray-900">
+                        <i data-lucide="gallery-horizontal" class="mr-2 h-4 w-4"></i>
+                        Photo Gallery
+                    </button>
+                    <button id="favorite-btn"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white/20 hover:bg-white/30 text-white h-9 px-6 border border-white/30 backdrop-blur-sm">
+                        <i id="favorite-icon" data-lucide="heart" class="mr-2 h-4 w-4"></i>
+                        <span id="favorite-text">Add to Favorites</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Main Content -->
+                    <div class="lg:w-2/3">
+                        <div class="mb-12">
+                            <h2 id="about-title" class="text-3xl font-bold text-gray-900 mb-6 border-b pb-2">About The
+                                Fort</h2>
+                            <div id="descriptions-container" class="space-y-8">
+                                <p class="text-gray-500 italic">Exploring history...</p>
+                            </div>
+                        </div>
+
+                        <!-- Location Map -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
+                                <a href="pincode.html" class="block py-2 text-gray-600">Pincode</a>
+                                <i data-lucide="map" class="h-6 w-6 text-blue-600"></i>
+                                Location Map
+                            </h3>
+                            <div id="map" class="w-full h-[400px] rounded-xl shadow-md border border-gray-200"
+                                style="min-height: 400px;"></div>
+                        </div>
+
+                        <!-- Highlights Section -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Key Highlights</h3>
+                            <div id="key-highlights-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-md shadow-sm border border-gray-200">Loading
+                                    highlights...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:w-1/3 space-y-8">
+                        <!-- Quick Info -->
+                        <div class="quick-info-section bg-gray-50 p-6 rounded-md shadow-sm">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Quick Info</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li id="quick-info-location"><strong>Location:</strong> Loading...</li>
+                                <li id="quick-info-state"><strong>State:</strong> Loading...</li>
+                                <li id="quick-info-category"><strong>Category:</strong> Historic Fort</li>
+                                <li id="quick-info-pincode" style="display: none;"><strong>Pincode:</strong> Loading...
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Plan Your Visit -->
+                        <div class="plan-visit-section bg-white p-6 rounded-md shadow-md border border-gray-200">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Plan Your Visit</h3>
+                            <div class="space-y-3">
+                                <button id="sidebar-view-on-map"
+                                    class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4">View
+                                    on Map</button>
+                                <button id="sidebar-photo-gallery"
+                                    class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4">Photo
+                                    Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                    Gallery
+                </h2>
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gallery-grid">
+                    <!-- Gallery images will be rendered here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="mountain" class="h-8 w-8 text-blue-400"></i>
+                        <span class="text-xl font-bold">Pirates Droid</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Information About Famous, Natural, Religious, Ancient Places Near You, Along With The Location
+                        and Photos In This App.
+                    </p>
+                    <div class="flex space-x-4">
+                        <i data-lucide="facebook"
+                            class="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="twitter"
+                            class="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="instagram"
+                            class="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="youtube"
+                            class="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors"></i>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="places.html" class="text-gray-400 hover:text-white transition-colors">Top
+                                Places</a></li>
+                        <li><a href="forts.html" class="text-gray-400 hover:text-white transition-colors">Historic
+                                Forts</a></li>
+                        <li><a href="blogs.html" class="text-gray-400 hover:text-white transition-colors">Travel
+                                Blog</a></li>
+                        <li><a href="upcoming.html" class="text-gray-400 hover:text-white transition-colors">Upcoming
+                                Places</a></li>
+                        <li><a href="app.html" class="text-gray-400 hover:text-white transition-colors">Mobile App</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Travel Categories -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Travel Categories</h3>
+                    <ul id="footer-categories" class="space-y-2">
+                        <li><span class="text-gray-400">Historical Sites</span></li>
+                        <li><span class="text-gray-400">Nature & Wildlife</span></li>
+                        <li><span class="text-gray-400">Adventure Sports</span></li>
+                        <li><span class="text-gray-400">Religious Places</span></li>
+                        <li><span class="text-gray-400">Urban Destinations</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="h-4 w-4 text-blue-400"></i>
+                            <span class="text-gray-400 text-sm">piratesdroid46@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Pirates Droid. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="pincode.html" class="text-gray-400 hover:text-white text-sm transition-colors">
+                            Pincode
+                        </a>
+                        <a href="Privacy_Policy/Pirates-Droid.html"
+                            class="text-gray-400 hover:text-white text-sm transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="terms.html" class="text-gray-400 hover:text-white text-sm transition-colors">
+                            Terms
+                        </a>
+                        <a href="sitemap.xml" class="text-gray-400 hover:text-white text-sm transition-colors">
+                            Sitemap
+                        </a>
+                        <a href="llms.txt" class="text-gray-400 hover:text-white text-sm transition-colors">
+                            LLMS
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script type="module" src="fort.js"></script>
+    <script type="module" src="footer.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrfXPptz9MDwanCiLa-YzfsG5hmNAaJxI&callback=initMap&v=beta"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+# Travel Milestone
+
+> Your personal travel assistant. Get smart insights, live weather updates, offline maps, and personalized tips for India's most incredible destinations.
+
+## Main Pages
+- [Home](https://www.piratesdroid.com/index.html): Discover incredible India, featured destinations and search.
+- [Places](https://www.piratesdroid.com/places.html): Explore famous, natural, religious, and ancient places.
+- [Forts](https://www.piratesdroid.com/forts.html): Discover majestic historic forts across India.
+- [Travel Blog](https://www.piratesdroid.com/blogs.html): Insights, guides, and stories from experts.
+- [Mobile App](https://www.piratesdroid.com/app.html): Download the Travel Milestone app for on-the-go assistance.
+- [Pincode Search](https://www.piratesdroid.com/pincode.html): Find location details and pincodes.
+
+## About Travel Milestone
+Travel Milestone is a comprehensive guide to India's top travel destinations. Founded by Sushil Kambli and Co-Founded by Swapnali Kambli, the platform aims to connect travelers with the rich culture and heritage of India.
+
+## Contact
+- Email: piratesdroid46@gmail.com

@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pirates Droid - Discover Famous, Natural, Religious & Ancient Places</title>
-    <meta name="description"
-        content="Information About Famous, Natural, Religious, Ancient Places Near You, Along With The Location and Photos In This App.">
+    <title>Pirates Droid - Forts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
@@ -28,11 +26,11 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
-                        class="text-sm font-medium transition-colors hover:text-blue-600 text-blue-600 border-b-2 border-blue-600 pb-1">Home</a>
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Home</a>
                     <a href="places.html"
                         class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Places</a>
                     <a href="forts.html"
-                        class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Forts</a>
+                        class="text-sm font-medium transition-colors hover:text-blue-600 text-blue-600 border-b-2 border-blue-600 pb-1">Forts</a>
                     <a href="pincode.html"
                         class="text-sm font-medium transition-colors hover:text-blue-600 text-gray-600">Pincode</a>
                     <a href="blogs.html"
@@ -64,11 +62,11 @@
                     <div id="mobile-menu" class="hidden absolute top-16 right-0 w-full bg-white shadow-lg py-4 px-4">
                         <div class="flex flex-col space-y-4 mt-8">
                             <a href="index.html"
-                                class="text-lg font-medium transition-colors hover:text-blue-600 text-blue-600">Home</a>
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Home</a>
                             <a href="places.html"
                                 class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Places</a>
                             <a href="forts.html"
-                                class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Forts</a>
+                                class="text-lg font-medium transition-colors hover:text-blue-600 text-blue-600">Forts</a>
                             <a href="pincode.html"
                                 class="text-lg font-medium transition-colors hover:text-blue-600 text-gray-600">Pincode</a>
                             <a href="blogs.html"
@@ -96,170 +94,55 @@
     </header>
 
     <main class="flex-1">
-        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style="background-image: url('header_banner.jpg'); animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both;">
-                <div class="absolute inset-0 bg-black/40"></div>
+                style="background-image: url('https://images.unsplash.com/photo-1599661046289-e31897c4abb8');">
+                <div class="absolute inset-0 bg-black/50"></div>
             </div>
 
             <!-- Content -->
             <div class="relative z-10 container mx-auto px-4 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both;">
-                    Discover Incredible
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    Historic
                     <span class="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                        India
+                        Forts of India
                     </span>
                 </h1>
 
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.2s;">
-                    Explore magnificent forts, pristine natural wonders, and rich cultural heritage.
-                    Your journey through India's most breathtaking destinations starts here.
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200">
+                    Explore India's magnificent forts that stand as testaments to our rich heritage
+                    and architectural brilliance.
                 </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.4s;">
-                    <a href="places.html">
-                        <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white h-11 px-8">
-                            <i data-lucide="search" class="mr-2 h-5 w-5"></i>
-                            Explore Places
-                        </button>
-                    </a>
-                    <a href="forts.html">
-                        <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 border-white text-white hover:bg-white hover:text-gray-900">
-                            <i data-lucide="map-pin" class="mr-2 h-5 w-5"></i>
-                            Discover Forts
-                        </button>
-                    </a>
-                </div>
-
-                <!-- Stats -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-600"
-                    style="animation-name: slideInFromBottom, fadeIn; animation-duration: 0.5s, 0.5s; animation-fill-mode: both, both; animation-delay: 0.6s;">
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="map-pin" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">40+</span>
-                        </div>
-                        <p class="text-gray-300">Top Destinations</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="camera" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">25+</span>
-                        </div>
-                        <p class="text-gray-300">Historic Forts</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <i data-lucide="users" class="h-6 w-6 text-orange-400 mr-2"></i>
-                            <span class="text-2xl font-bold">50K+</span>
-                        </div>
-                        <p class="text-gray-300">Happy Travelers</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-
-        <!-- Featured Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Featured Destinations
-                    </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Discover India's most iconic and breathtaking destinations,
-                        carefully curated for unforgettable travel experiences.
-                    </p>
-                </div>
-
-                <div id="featured-places-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- PlaceCard components will be rendered here by JavaScript -->
-                </div>
             </div>
         </section>
 
-        <!-- Search & Filter Section -->
         <section class="py-16">
             <div class="container mx-auto px-4">
+
+                <!-- Interactive Fort Map -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Explore All Destinations
-                    </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Browse through our comprehensive collection of India's top travel destinations
-                    </p>
-                </div>
-
-                <!-- Search Bar -->
-                <div class="max-w-md mx-auto mb-8">
-                    <div class="relative">
-                        <i data-lucide="search"
-                            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"></i>
-                        <input type="text" id="search-input" placeholder="Search destinations..."
-                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-10" />
-                    </div>
-                </div>
-
-                <!-- Category Filters -->
-                <div id="category-filters" class="flex flex-wrap justify-center gap-2 mb-8">
-                    <!-- Category badges will be rendered here by JavaScript -->
-                </div>
-
-                <!-- Tabs -->
-                <div class="w-full">
-                    <div class="flex justify-center mb-8">
-                        <div
-                            class="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground">
-                            <button id="grid-view-tab"
-                                class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Grid
-                                View</button>
-                            <button id="trending-tab"
-                                class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Trending</button>
-                        </div>
-                    </div>
-
-                    <div id="grid-view-content" class="tab-content" style="display: block;">
-                        <div id="all-places-grid"
-                            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                            <!-- PlaceCard components will be rendered here by JavaScript -->
-                        </div>
-                        <div id="no-places-found" class="text-center py-12" style="display: none;">
-                            <p class="text-gray-500 text-lg">No destinations found matching your search.</p>
-                        </div>
-                    </div>
-
-                    <div id="trending-content" class="tab-content hidden" style="display: none;">
-                        <div class="max-w-4xl mx-auto">
-                            <div class="flex items-center gap-2 mb-6">
-                                <i data-lucide="trending-up" class="h-5 w-5 text-orange-500"></i>
-                                <h3 class="text-xl font-semibold">Trending Destinations</h3>
-                            </div>
-                            <div id="trending-places-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <!-- PlaceCard components will be rendered here by JavaScript -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- View All Button -->
-                <div class="text-center mt-12">
-                    <a href="places.html">
-                        <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-primary-foreground h-11 px-8">
-                            View All Destinations
-                        </button>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Interactive Fort Map</h3>
+                    <p class="text-gray-600 mb-6">Explore fort locations on an interactive map (Coming Soon)</p>
+                    <a href="#"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6 border-blue-600 text-blue-600 hover:bg-blue-50">
+                        View Map
                     </a>
                 </div>
+
+                <!-- Forts Grid -->
+                <div id="all-forts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Fort items will be rendered here by JavaScript -->
+                    <div class="col-span-full text-center py-12">
+                        <p class="text-gray-500 italic">Finding forts...</p>
+                    </div>
+                </div>
+
+                <div id="trending-forts-grid" class="hidden"></div> <!-- Supporting trending if needed -->
+            </div>
+            </div>
+            </div>
             </div>
         </section>
 
@@ -384,10 +267,7 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="forts.js"></script>
     <script type="module" src="footer.js"></script>
     <script type="module" src="auth-ui.js"></script>
 </body>
